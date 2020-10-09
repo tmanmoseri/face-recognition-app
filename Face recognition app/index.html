@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zensar face recognition app</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/grid.css">
+<link rel="stylesheet" href="css/animate.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,400i" rel="stylesheet">
+<link rel="stylesheet" href="css/ionicons.min.css">
+<link rel="stylesheet" href="css/query.css">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <!-- ################################################################################################ -->
+    <img class="logo" src="images/logo.png" alt="logo">
+     <a class="mobile-nav-icon js--nav-icon"><i class="ion-ios-more"></i></a>
+     <ul class="main-nav js--main-nav">
+
+      <nav id="mainav">
+      <ul class="clear">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a class="drop" href="#">Pages</a>
+          <ul>
+            <li><a href="#" data-toggle="modal"  onclick="Fname();display(1)"  data-target="#reg">Register</a></li>
+            <li><a href="">new page</a></li>
+            <li><a href="">new page</a></li>
+            <li><a href="">new page</a></li>
+          </ul>
+        </li>
+
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+
+
+<!-- ################################################################################################ -->
+<div class="wrapper row2" style="background-image:url(images/logo.png)">
+  <div class="overlay" col-mod="">
+    <!-- ############################################################################################################# -->
+    <div id="intro">
+      <div class="txtblock">
+          <h1 class="uppercase"><span>Zensar Customer Portal </span></h1>
+        <h3 class="nospace push15 uppercase">TEXT HERE</h3>
+
+            </div>
+          </div>
+    </div>
+    <!-- ############################################################################################################# -->
+  </div>
+
+<!-- ################################################################################################ -->
+
+<div class="wrapper">
+  <div id="hp_intro">
+    <!-- ############################################################################################################# -->
+    <ul class="nospace clear">
+      <li class="one_quarter first"><a href="#" class="overlay" data-toggle="modal" data-target="#face">
+        <div class="circle push30"><span class="icon-user"></span></div>
+        <h6 class="nospace">Face recognition</h6>
+        </a></li>
+
+        
+      <li class="one_quarter"><a href="#" class="overlay" data-toggle="modal" data-target="#picture">
+        <div class="circle push30"><span class="icon-picture"></span></div>
+        <h6 class="nospace">Picture recognition</h6>
+        </a></li>
+
+      <li class="one_quarter"><a href="#" class="overlay" data-toggle="modal" data-target="#text">
+        <div class="circle push30"><span class="icon-keyboard" ></span></div>
+        <h6 class="nospace">text recognition</h6>
+        </a></li>
+
+      <li class="one_quarter"><a href="#" class="overlay" data-toggle="modal" data-target="#speech">
+        <div class="circle push30"><span class="icon-microphone" ></span></div>
+        <h6 class="nospace">Speech recognition</h6>
+        </a></li>
+    </ul>
+    <!-- ############################################################################################################# -->
+  </div>
+</div>
+<!-- #############################################################################################################
+  
+
+            ======================================
+            modals
+            ======================================
+            ------------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!------------------------------------------
+             Modal Face
+             ------------------------------------------->
+                <div class="modal fade" id="face" tabindex="-1" role="dialog" aria-labelledby="project-4-label" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" col-mod="4">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                         
+                        <!-- #################################################################################################################
+                               video console
+                        ################################################################################################################# -->
+                       <div id="console"></div>
+                         <video autoplay playsinline muted id="webcam" width="300" height="300"></video>
+                     
+                          <!-- Load index.js after the content of the page -->
+                       <!--------------------------------------------
+                        after recognition
+                        ------------------------------------------>
+                      </div>
+                </div>
+                <!-- Modal end -->
+              </div>
+               </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             <!------------------------------------------
+             Modal Face
+             ------------------------------------------->
+                <div class="modal fade" id="picture" tabindex="-1" role="dialog" aria-labelledby="project-4-label" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" col-mod="4">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                         
+                        <!-- #################################################################################################################
+                               picture console
+                        ################################################################################################################# -->
+                       <div id="console"></div>
+                         <video autoplay playsinline muted id="video" width="300" height="300"></video>
+                     
+                          <!-- Load index.js after the content of the page -->
+                       <!--------------------------------------------
+                        after recognition
+                        ------------------------------------------>
+                      </div>
+                </div>
+                <!-- Modal end -->
+              </div>
+               </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-----------------------------------------
+             Modal Speech
+             ----------------------------------------->
+                <div class="modal fade" id="speech" tabindex="-1" role="dialog" aria-labelledby="project-4-label" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" col-mod="4">
+                    <div class="modal-content">
+                     
+                      <div class="modal-body">
+                         
+                        <!-- #################################################################################################################
+                               Speech console
+                        ################################################################################################################# -->
+                        <div class="app"> 
+
+                <h3>Press the recording button to start recording</h3>
+
+                <div class="input-single">
+                    <textarea id="note-textarea"  placeholder="Create a new note by typing or using voice recognition." rows="6"></textarea>
+                </div> 
+
+
+                <button id="start-record-btn" title="Start Recording">Start Recognition</button>
+               <!-- <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button> -->
+                <button id="save-note-btn" title="Save Note">Send</button>   
+                <p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access.</p>
+                
+                <h3>My Speech</h3>
+                <ul id="notes">
+                    <li>
+                        <p class="no-notes">You don't have any notes.</p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+                        
+
+                       <!--------------------------------------------
+                        after recognition
+                        ------------------------------------------>
+                      </div>
+                </div>
+                <!-- Modal end -->
+              </div>
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               <!-----------------------------------------
+             Modal text
+             ----------------------------------------->
+                <div class="modal fade" id="text" tabindex="-1" role="dialog" aria-labelledby="project-4-label" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" col-mod="4">
+                    <div class="modal-content">
+                     
+                      <div class="modal-body">
+                         
+                        <!-- #################################################################################################################
+                               text console
+                        ################################################################################################################# -->
+                        <div class="app"> 
+
+                <h3>Press the recording button to start recording</h3>
+
+                <div class="input-single">
+                    <textarea id="note-textarea"  placeholder="Create a new note by typing or using voice recognition." rows="6"></textarea>
+                </div> 
+
+
+                <button id="start-record-btn" title="Start Recording">Start Recognition</button>
+               <!-- <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button> -->
+                <button id="save-note-btn" title="Save Note">Send</button>   
+                <p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access.</p>
+                
+                <h3>My Speech</h3>
+                <ul id="notes">
+                    <li>
+                        <p class="no-notes">You don't have any notes.</p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+                        
+
+                       <!--------------------------------------------
+                        after recognition
+                        ------------------------------------------>
+                      </div>
+                </div>
+                <!-- Modal end -->
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               <!------------------------------------------
+             Modal register
+             ------------------------------------------->
+                <div class="modal fade" id="reg" tabindex="-1" role="dialog" aria-labelledby="project-4-label" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" col-mod="4">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+
+
+                        <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    
+                    <form name="form1" action="index.html" method="POST" autocomplete="on" onsubmit="required()">
+                               
+                                <p id="1">
+                                    <label id="1" for="Firt_name" class="uname" data-icon="u">First Name</label>
+                                    <input id="1" name="firstName" value="" required="required" type="text" placeholder="John" />
+                                     <button   type="submit" onclick="required(2)">continue</button>
+
+                                <p id="2">
+                                    <label id="2" for="Last_Name" class="uname" data-icon="u"  autocomplete="on">Last Name</label>
+                                    <input id="2" name="LastName" required="required" type="text" placeholder="Teller" />
+                                    <button   type="submit" onclick="required(3)">continue</button>
+                                </p>
+                                <p id="3">
+                                    <label for="Contact_Details" class="uname" >Contact</label>
+                                    <input id="3" name="Contact_Details" required="required" type="number" placeholder="Contact"  autocomplete="on" />
+                                     <button  type="submit" onclick="required(4)">continue</button>
+                                </p>
+                              <p id="4">
+                                  <label id="4" for="Veh_Reno" class="uname" data-icon="u">Vehicle Number</label>
+                                  <input id="4" name="Veh_Reno" type="text" placeholder="Vehicle Number"  autocomplete="on" />
+                                    <button   type="submit" onclick="required(5)">continue</button>
+                              </p> 
+
+                              <p id="5">
+
+                                    <label id="5" for="Reason_For_Entry" class="uname"  > Reason for visiting</label>
+                                    <textarea id="number5" name="Reason_For_Entry" required="required" type="textarea" placeholder="Reason for visiting" cols="50"
+                                    rows="3"></textarea>
+                                     <button   type="submit" onclick="required(6)">continue</button>
+                                </p>
+                                 <p id="6">
+                                    <label id="6" for="TimeIn" class="uname" >Tme-in</label>
+                                    <input id="6" name="TimeIn" required="required" type="time" placeholder="Time-in"  autocomplete="on" />
+                                     <button  type="submit" onclick="required(7)">continue</button>
+
+
+                                </p>
+                                <p id="7">
+                                    <label id="7" for="ID_Ret" class="uname" data-icon="u">ID_Ret</label>
+                                    <input id="7" name="ID_Ret" required="required" type="number" placeholder="ID_Ret"  autocomplete="on" />
+                                    <button  type="submit" name="register" onclick="required(8)">SUMBIT</button>
+                                     
+                                </p>
+                               
+                            </form>
+                </div>
+
+
+                          <!-- Load index.js after the content of the page -->
+                       <!--------------------------------------------
+                        after recognition
+                        ------------------------------------------>
+                      </div>
+                </div>
+                <!-- Modal end -->
+              </div>
+               </div>
+
+             
+               
+
+
+
+
+                
+          
+
+
+                
+              
+            
+<!-- ################################################################################################ -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+<script src="https://static.opentok.com/v2/js/opentok.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+
+<script src="script.js"></script>
+
+<!-- jQuery -->
+  <script src="js/jquery.min.js"></script>
+  <!-- jQuery Easing -->
+  <script src="js/jquery.easing.1.3.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Waypoints -->
+  <script src="js/jquery.waypoints.min.js"></script>
+  <!-- Stellar Parallax -->
+  <script src="js/jquery.stellar.min.js"></script>
+  <!-- Counter -->
+  <script src="js/jquery.countTo.js"></script>
+  <!-- Magnific Popup -->
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/magnific-popup-options.js"></script>
+  <!-- Google Map -->
+  
+
+
+  
+  <!-- Main JS (Do not remove) -->
+  <script src="js/main.js"></script>
+  <script src="/js/face-api.min.js"></script> 
+   <script src="/js/face-api.js"></script> 
+   <script src="/js/faceDetectionControls.js"></script> 
+   <script src="/js/imageSelectionControls.js"></script> 
+</body>
+</html>
